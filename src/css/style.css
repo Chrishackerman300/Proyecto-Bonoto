@@ -7,17 +7,326 @@
     --bg-main: #cbcbcb; 
     --bg-card-1-5: hsl(256, 67%, 59%);
     --bg-card-3-8: hsl(39, 100%, 71%);
+    --bg-card-2-4-6-7: hsl(0, 0%, 100%);
 
     /*Colors Texts and Fonts*/
     --font: 'Poppins', sans-serif;
-    --color-strong-1: hsl(31, 66%, 93%);
+    --color-strong-1: hsl(33, 94%, 74%);
     --color-strong-2: hsl(254, 88%, 90%);
     --color-w: hsl(0, 0%, 100%);
     --color-b: hsl(0, 0%, 7%);
+    --color-p: hsl(256, 33%, 59%);
 
     /*Width's*/
-    --margin-t: 20px;
+    --margin-t: 2rem;
     --margin-web: 0 auto;
     --size: 90%;
     --max-size: 1200px;
+    --padding-size: 1.5rem 2rem;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-main);
+    font-family: var(--font);
+}
+
+main{
+    width: 100%;
+    height: 100%;
+}
+
+.container--main{
+    width: var(--size);
+    max-width: var(--max-size);
+    margin: var(--margin-web);
+    margin-top: var(--margin-t);
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(2, 400px);
+}
+
+.card--7{
+    grid-column: 1/3;
+    grid-row: 1/1;
+}
+
+.card--1{
+    grid-column: 3/7;
+    grid-row: 1/1;
+}
+
+.card--4{
+    grid-column: 7/-1;
+    grid-row: 1/1;
+}
+
+.card{
+    width: 100%;
+    height: 100%;
+    padding: var(--padding-size);
+    border-radius: 10px;
+}
+
+.card--1,
+.card--5{
+    background: var(--bg-card-1-5);
+}
+
+.card--container{
+    width: 100%;
+    height: 100%;
+}
+
+.card-title{
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--color-w);
+}
+
+.card-title-1{
+    text-align: center;
+}
+
+.strong--1{
+    color: var(--color-strong-1);
+}
+
+.card-figure{
+    width: 100%;
+    margin: 20px 0;
+}
+
+.card-img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.card-paragraph{
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 400;
+    color: var(--color-b);
+}
+
+.card-paragraph-1{
+    color: var(--color-w);
+    text-align: center;
+}
+
+.card--2{
+    background: var(--bg-card-2-4-6-7);
+}
+
+.card-title-2{
+    width: 100%;
+    color: var(--color-b);
+    font-size: 1.5rem;
+}
+
+.card--3{
+    background: var(--bg-card-3-8);
+}
+
+.card-title-3{
+    font-size: 1.3rem;
+    color: var(--color-b);
+}
+
+.card--4{
+    background: var(--bg-card-2-4-6-7);
+}
+
+.card-title-4{
+    font-size: 1.5rem;
+    color: var(--color-b);
+    text-align: center;
+}
+
+.subtitle{
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.3;
+    color: var(--color-p);
+}
+
+.card-title-5{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.card--6,
+.card--7{
+    background: var(--bg-card-2-4-6-7);
+}
+
+.card-title-6,
+.card-title-7{
+    color: var(--color-b);
+}
+
+.card-title-7{
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.strong--2{
+    color: hsl(256, 67%, 59%);
+}
+
+.card--8{
+    background: var(--bg-card-3-8);
+}
+
+.card-title-8{
+    color: var(--color-b);
+    font-size: 1.5rem;
+}
+
+/*Responsive Design*/
+@media screen and (max-width: 768px){
+    main{
+        width: 100%;
+        height: 100%;
+    }
+
+    .container--main{
+        width: var(--size);
+        max-width: var(--max-size);
+        margin: var(--margin-web);
+        margin-top: var(--margin-t);
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .card{
+        width: 100%;
+        height: 100%;
+        padding: var(--padding-size);
+        border-radius: 10px;
+    }
+
+    .card--1,
+    .card--5{
+        background: var(--bg-card-1-5);
+    }
+
+    .card--container{
+        width: 100%;
+        height: 100%;
+    }
+
+    .card-title{
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 1.3;
+        color: var(--color-w);
+    }
+
+    .card-title-1{
+        text-align: center;
+    }
+
+    .strong--1{
+        color: var(--color-strong-1);
+    }
+
+    .card-figure{
+        width: 100%;
+        margin: 20px 0;
+    }
+    
+    .card-img{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .card-paragraph{
+        font-size: 1rem;
+        line-height: 1.5;
+        font-weight: 400;
+        color: var(--color-b);
+    }
+
+    .card-paragraph-1{
+        color: var(--color-w);
+        text-align: center;
+    }
+
+    .card--2{
+        background: var(--bg-card-2-4-6-7);
+    }
+
+    .card-title-2{
+        width: 100%;
+        color: var(--color-b);
+        font-size: 1.5rem;
+    }
+
+    .card--3{
+        background: var(--bg-card-3-8);
+    }
+
+    .card-title-3{
+        font-size: 1.3rem;
+        color: var(--color-b);
+    }
+
+    .card--4{
+        background: var(--bg-card-2-4-6-7);
+    }
+
+    .card-title-4{
+        font-size: 1.5rem;
+        color: var(--color-b);
+        text-align: center;
+    }
+
+    .subtitle{
+        font-size: 1rem;
+        font-weight: 500;
+        text-align: center;
+        line-height: 1.3;
+        color: var(--color-p);
+    }
+
+    .card-title-5{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .card--6,
+    .card--7{
+        background: var(--bg-card-2-4-6-7);
+    }
+
+    .card-title-6,
+    .card-title-7{
+        color: var(--color-b);
+    }
+
+    .card-title-7{
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
+    .strong--2{
+        color: hsl(256, 67%, 59%);
+    }
+
+    .card--8{
+        background: var(--bg-card-3-8);
+    }
+
+    .card-title-8{
+        color: var(--color-b);
+        font-size: 1.5rem;
+    }
 }
