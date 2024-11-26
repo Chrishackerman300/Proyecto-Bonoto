@@ -359,4 +359,8 @@ main{
         color: var(--color-b);
         font-size: 1.5rem;
     }
+
+    .card--container-5{
+        flex-direction: column;
+    }
 }
